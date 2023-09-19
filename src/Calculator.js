@@ -44,13 +44,13 @@ const Calculator = () => {
       setError(false);
       setErrorMsg('');
       if (e.target.classList.contains('plus')) {
-        setResult(+num1 + +num2);
+        setResult((+num1 + +num2).toFixed(2));
       } else if (e.target.classList.contains('minus')) {
-        setResult(parseFloat(num1) - parseFloat(num2));
+        setResult((parseFloat(num1) - parseFloat(num2)).toFixed(2));
       } else if (e.target.classList.contains('multiply')) {
-        setResult(+num1 * +num2);
+        setResult((+num1 * +num2).toFixed(2));
       } else {
-        setResult(parseFloat(num1) / parseFloat(num2));
+        setResult((parseFloat(num1) / parseFloat(num2)).toFixed(2));
       }
     }
     setShow(true);
